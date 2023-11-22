@@ -29,7 +29,18 @@ def  main():
             for book in booklist:
                 if keyword in book:
                     print(book)
-                    
+        elif choice==3:
+            print("Displaying all  your books ...")
+            for i in range(len(booklist)):
+            
+              print(booklist[i])
+              
+        else:
+            
+            print("Leaving Bookstore...")
+            quit()
+            
+print("Program terminated..")
             
             
             
