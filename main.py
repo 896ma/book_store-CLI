@@ -3,7 +3,23 @@
 
 def  main():
     
-    booklist =[]  #initalizing thebooklist
+    try:
+    
+        booklist =[]  #initalizing thebooklist
+        
+        infile= open("Booklists.txt", "r")
+        line= infile.readline()
+        
+        while line:
+            booklist.append(line.rstrip("\n").split(","))
+            line =infile.readline()
+        infile.close() # Closing  the infile
+    except FileNotFoundError:
+        print("An unexpected error occurred and your <Booklists.txt> file  is not found.")
+    
+        print("Starting a new bookslist")
+        booklist=[]
+        
     choice =0
     while choice!=4:
         print("Greetings Developer")
@@ -40,11 +56,16 @@ def  main():
             print("Leaving Bookstore...")
             quit()
             
-print("Program terminated..")
+    print("Program terminated..")
+# Saving the books listed to an external TXT  File
+    outfile =open("Booklists.txt","W")
+    for book in  booklist :
+        outfile.write("," .join(book) + "\n")
+    outfile.close()
+        
+                
             
-            
-            
-    
+        
 
 
 if   __name__ == "__main__":
