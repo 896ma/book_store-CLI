@@ -4,5 +4,5 @@ uses  the list types to  allow a user to enter the name of the book,  Author and
 The user is allowed to search for the  book in the  Booklist using a keyword which is stored as a string. (name of the book
 )
 
-...The user can then  display all books or quit the application.
+...The user can then  display all books or quit the appl
 
