@@ -1,2 +1,2 @@
-badg
+bad
  
